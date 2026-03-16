@@ -8,12 +8,129 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/TextViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Churrascometro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="40dp"
+        android:textSize="28sp"
+        android:textColor="#0000FF"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/TextViewQtdHomens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe a quantidade de Homens:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewTitle"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <SeekBar
+        android:id="@+id/SeekBarMen"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/TextViewMen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewQtdHomens"
+        android:layout_marginTop="15dp"
+        android:progress="1"
+        android:min="0"
+        android:max="30"/>
+
+    <TextView
+        android:id="@+id/TextViewMen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/SeekBarMen"
+        app:layout_constraintTop_toBottomOf="@id/TextViewQtdHomens"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/TextViewQtdMulheres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe a quantidade de Mulheres:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SeekBarMen"
+        android:layout_margin="20dp"
+        android:textSize="20sp"/>
+
+    <SeekBar
+        android:id="@+id/SeekBarWomen"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/TextViewWomen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewQtdMulheres"
+        android:layout_marginTop="15dp"
+        android:progress="1"
+        android:min="0"
+        android:max="30"/>
+
+    <TextView
+        android:id="@+id/TextViewWomen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/SeekBarWomen"
+        app:layout_constraintTop_toBottomOf="@id/TextViewQtdMulheres"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="1"/>
+
+    <TextView
+        android:id="@+id/TextViewMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/TextViewQttMeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SeekBarWomen"
+        android:layout_marginTop="40dp"
+        android:text="Carne:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/TextViewQttMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TextViewMeat"
+        app:layout_constraintTop_toBottomOf="@id/SeekBarWomen"
+        android:layout_marginTop="40dp"
+        android:text=""
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/TextViewSausage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/TextViewQttSausage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextViewMeat"
+        android:layout_marginTop="20dp"
+        android:text="Linguica:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/TextViewQttSausage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/TextViewSausage"
+        app:layout_constraintTop_toBottomOf="@id/TextViewQttMeat"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="20sp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
